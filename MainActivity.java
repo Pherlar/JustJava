@@ -19,9 +19,11 @@ import java.text.NumberFormat;
  * This app displays an order form to order coffee.
  */
 public class MainActivity extends AppCompatActivity {
+    int quantity = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
@@ -30,10 +32,28 @@ public class MainActivity extends AppCompatActivity {
      * This method is called when the order button is clicked.
      */
     public void submitOrder(View view) {
-        int quantity = 5;
         display (quantity);
         displayPrice(quantity * 5);
     }
+
+    /**
+     * This method is called when the increment button is clicked.
+     */
+    public void incrementQuantity(View view) {
+        quantity =  quantity + 1;
+        display (quantity);
+
+    }
+
+    /**
+     * This method is called when the decrement button is clicked.
+     */
+
+    public void decrementQuantity(View view) {
+        quantity = quantity - 1;
+        display (quantity );
+    }
+
 
     /**
      * This method displays the given quantity value on the screen.
