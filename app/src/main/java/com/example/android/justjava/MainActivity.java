@@ -10,6 +10,8 @@ package com.example.android.justjava;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -57,7 +59,17 @@ public class MainActivity extends AppCompatActivity {
         Log.i("MainActivity", "has chocolate "+ hasChocolateBoolean);
 
         int price = calculatePrice(hasWhippedCreamBoolean, hasChocolateBoolean);
-        displayMessage(createOrderSummary(customerName,quantity,price,hasWhippedCreamBoolean,hasChocolateBoolean));
+        String summaryMessage = createOrderSummary(customerName,quantity,price,hasWhippedCreamBoolean,hasChocolateBoolean);
+        displayMessage(summaryMessage);
+
+        Intent intent = new Intent(Intent.ACTION_SEND);
+        intent.setType("*/*");
+        intent.putExtra(Intent.EXTRA_SUBJECT, "Just Java order for" + customerName);
+        intent.putExtra(Intent.EXTRA_TEXT, summaryMessage);
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivity(intent);
+        }
+
     }
 
     /**

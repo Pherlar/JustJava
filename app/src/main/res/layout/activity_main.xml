@@ -5,7 +5,7 @@
     android:layout_height="match_parent">
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:padding="16dp"
         android:orientation="vertical"
         tools:context=".MainActivity"
@@ -15,7 +15,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="Name"
+                android:text="@string/name"
                 android:textAllCaps="true" />
 
             <EditText
@@ -33,7 +33,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="0dp"
-            android:text="Toppings"
+            android:text="@string/toppings"
             android:textAllCaps="true" />
 
         <CheckBox
@@ -41,7 +41,7 @@
             android:layout_height="wrap_content"
             android:layout_marginVertical="16dp"
             android:paddingLeft="24dp"
-            android:text="Whipped Cream"
+            android:text="@string/whipped_cream"
             android:textSize="16sp"
             android:id = "@+id/checkBox1"
 
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
                 android:paddingLeft="24dp"
-                android:text="Chocolate"
+                android:text="@string/chocolate"
                 android:textSize="16sp"
                 android:id = "@+id/checkBox2"
 
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="Quantity"
+            android:text="@string/quantity"
             android:textAllCaps="true" />
 
         <LinearLayout
@@ -101,7 +101,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="ORDER SUMMARY"
+            android:text="@string/order_summary"
             android:textAllCaps="true" />
 
 
@@ -117,7 +117,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Order"
+            android:text="@string/order"
             android:textAllCaps="true"
             android:onClick="submitOrder" />
 
