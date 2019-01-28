@@ -11,6 +11,24 @@
         tools:context=".MainActivity"
         >
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="Name"
+                android:textAllCaps="true" />
+
+            <EditText
+                android:id="@+id/nameEditTextView"
+                android:inputType="textPersonName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+
+
+                />
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -28,6 +46,18 @@
             android:id = "@+id/checkBox1"
 
             />
+
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:paddingLeft="24dp"
+                android:text="Chocolate"
+                android:textSize="16sp"
+                android:id = "@+id/checkBox2"
+
+                />
 
 
         <TextView
